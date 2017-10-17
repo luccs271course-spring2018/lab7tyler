@@ -1,0 +1,51 @@
+# Why don't we need an explicit constructor?
+ - The class already has a declared node, which is all that is needed for this case. Also in the push method, a new node
+  is declared each time so that counts as well.
+
+
+# What is the time and (extra) space complexity of each of the LinkedStack methods, as well as ReverseLines.main?
+push:
+-time: O(1)
+-space: O(1)
+
+peek:
+-time: O(1)
+-space: O(1)
+
+pop:
+-time: O(1)
+-space O(1)
+
+isEmpty:
+-time: O(1)
+-space O(1)
+
+asList:
+-time: O(n)
+-space: O(n)
+
+ReverseLines.main
+-time: O(n)
+-space: O(n)
+
+
+# How else (not using Node) could we have implemented LinkedStack in such a way that it is still based on a linked
+list but the asList method uses constant time and space?
+- Using an arraylist, we can still use the asList method without nodes and it would still be using constant time and space.
+
+
+# Is it better for push and pop to return the item or the stack itself? Briefly discuss the pros and cons of each design.
+Return Item
+- Pros:
+    - more time efficient
+- Cons:
+    - can't see other items in the stack
+
+Return Stack
+- Pros:
+    - can see all items in the stack
+- Cons:
+    - less time efficient
+
+The stack itself seems to be the better choice just because we would be able to see all of the items in the stack. Even
+if it is slightly less efficient, it adds clarity and organization to the program.
