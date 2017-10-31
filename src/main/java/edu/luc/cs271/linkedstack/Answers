@@ -1,19 +1,18 @@
 What is the purpose of the various auxiliary methods populateList, populateFifoList, and ReverseLines.printReverse?
-To test and use recursion in order to find the solution.
+    -To test and use recursion in order to find the solution.
 
 
 Why do these methods need to have arguments, and how does the argument change from one recursive call to the next?
-Recursion methods need to be able to call itself over and over, with a different input every time so there needs to be an argument.
+    -Recursion methods need to be able to call itself over and over, with a different input every time so there needs to be an argument.
 populateList and populateFifoList changes in linking from node to node. ReverseLines.printReverse changes in every input that the
 user types in.
 
 
 What are the time and space complexity of each of the populateList populateFifoList methods, as well as ReverseLines.printReverse?
-populateList: time- O(n) space- O(n)
-populateFifoList: time- O(n) space- O(n)
-ReverseLines.printReverse: time- O(n) space- O(n)
+    -populateList: time- O(n) space- O(n)
+    -populateFifoList: time- O(n) space- O(n)
+    -ReverseLines.printReverse: time- O(n) space- O(n)
 
 
 Which of these methods can be implemented using while loops?
-ReverseLines.printReverse - Can make a condition to where as long as the input isn't null, to keep running or do whatever the
-method does.
+   - populateList, populateFifoList, and ReverseLines.printReverse can all be used with while loops
