@@ -1,30 +1,30 @@
 package edu.luc.cs271.linkedstack;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.NoSuchElementException;
-
 
 public class LinkedStack<E> implements IStack<E> {
 
   /** The topmost node of this stack. The stack gets pushed down from here. */
   private Node<E> top;
+
   private int size = 0;
   // TODO why don't we need an explicit constructor?
 
   @Override
   public E push(final E obj) {
     // TODO
-    top = new Node<E>(obj,top);
+    top = new Node<E>(obj, top);
     return obj;
   }
 
   @Override
   public E peek() {
     // TODO
-    if(top == null){
+    if (top == null) {
       throw new NoSuchElementException();
-    } else{
+    } else {
       return top.data;
     }
   }
@@ -32,7 +32,7 @@ public class LinkedStack<E> implements IStack<E> {
   @Override
   public E pop() {
     // TODO
-    if(top == null){
+    if (top == null) {
       throw new NoSuchElementException();
     } else {
       E temp = top.data;
@@ -44,12 +44,13 @@ public class LinkedStack<E> implements IStack<E> {
   @Override
   public boolean isEmpty() {
     // TODO
-    if(top == null){
+    if (top == null) {
       return true;
     } else {
       return false;
     }
   }
+
   @Override
   public List<E> asList() {
     final ArrayList<E> result = new ArrayList<>(size);
@@ -59,7 +60,7 @@ public class LinkedStack<E> implements IStack<E> {
 
   private void populateList(final Node<E> curr, final List<E> result) {
     // TODO recursively populate the list in the desired order
-    if(curr == null){
+    if (curr == null) {
       return;
     }
     result.add(curr.data);
@@ -75,7 +76,7 @@ public class LinkedStack<E> implements IStack<E> {
 
   private void populateFifoList(final Node<E> curr, final List<E> result) {
     // TODO recursively populate the list in the desired order
-    if(curr == null){
+    if (curr == null) {
       return;
     }
     result.add(0, curr.data);
